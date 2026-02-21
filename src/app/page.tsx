@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ScriptBuilder from "@/components/ScriptBuilder";
 import RecordingTool from "@/components/RecordingTool";
 import ComprehensionQuiz from "@/components/ComprehensionQuiz";
+import TTSPlayer from "@/components/TTSPlayer";
 
 export default function Home() {
   const [completeScript, setCompleteScript] = useState<string | null>(null);
@@ -29,6 +30,11 @@ export default function Home() {
 
       {completeScript && selectedJobId && (
         <div className="animate-fade-in" style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+          {/* TTS Player Section */}
+          <section>
+            <TTSPlayer script={completeScript} />
+          </section>
+
           <section>
             <RecordingTool onSave={(blob) => console.log("Recording saved", blob)} />
           </section>
