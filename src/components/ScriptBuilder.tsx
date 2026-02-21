@@ -93,7 +93,7 @@ export default function ScriptBuilder({ onComplete }: ScriptBuilderProps) {
                                 setStep(2);
                             }}
                         >
-                            {job.ko} ({job.en})
+                            {job.en}
                         </button>
                     ))
                 ) : (
@@ -106,7 +106,7 @@ export default function ScriptBuilder({ onComplete }: ScriptBuilderProps) {
                                 setSelectedReason(reason);
                             }}
                         >
-                            {reason.ko} ({reason.en})
+                            {reason.en}
                         </button>
                     ))
                 )}
